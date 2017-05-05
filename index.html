@@ -101,6 +101,8 @@
 
                 cur = data[i];
 
+                if (cur.department === 'none') cur.department = 'japanologie';
+
                 marker = L.marker([cur.longitude, cur.latitude], { icon: L.icon(icons[cur.department]) });
                 marker.bindPopup('<h1>' + cur.title + '</h1>' + cur.content);
 
